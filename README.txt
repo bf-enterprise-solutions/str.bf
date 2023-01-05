@@ -87,6 +87,7 @@ STRING SWAPPING (swap.bf)
 
 Swaps two strings adjacent to each other, so that
 [0] [first string...] [0] [second string...] [0] [0]
+     ^ cursor here
 becomes
 [0] [second string...] [0] [first string...] [0] [0]
 no matter the size of the strings.
@@ -99,6 +100,7 @@ STRING REVERSAL (reverse.bf)
 
 Simply reverses the string, so that
 [0] [h] [e] [l] [l] [o] [0]
+     ^ cursor here
 becomes
 [0] [o] [l] [l] [e] [h] [0]
 
