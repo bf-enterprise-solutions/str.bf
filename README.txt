@@ -91,7 +91,9 @@ becomes
 [0] [second string...] [0] [first string...] [0] [0]
 no matter the size of the strings.
 
-Uses two cells on the right of the second string.
+Uses
+- two cells to the right of the second string
+- and the zero cell preceding the first string, so it's mandatory (as all the other leading zeros in this repository memory layouts) for it to be empty.
 
 STRING REVERSAL (reverse.bf)
 
@@ -102,7 +104,7 @@ becomes
 
 Uses
 - N+2 cells, where N is the length of the string,
-- and the zero cell preceding the string, so it's mandatory (as all the other leading zeros in this repository memory layouts) for it to be zero.
+- and the zero cell preceding the string, so it's mandatory for it to be empty.
 
 STRING COPYING (copy.bf)
 
