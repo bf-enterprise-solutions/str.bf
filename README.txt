@@ -8,6 +8,7 @@ Given that Brainfuck is terribly low-level, one might encounter lots of difficul
 and adding some Brainfuck-specific utilities, like
 - string deinterleaving
 - duplication,
+- swapping,
 - reversal,
 - and length clipping.
 
@@ -81,6 +82,16 @@ into
 [0] [A] [A] [B] [B] [C] [C] [D] [D] [E] [E] [0]
 
 Requires at least 2N cells to duplicate the string, where N is the length of the string. Grows to the right.
+
+STRING SWAPPING (swap.bf)
+
+Swaps two strings adjacent to each other, so that
+[0] [first string...] [0] [second string...] [0] [0]
+becomes
+[0] [second string...] [0] [first string...] [0] [0]
+no matter the size of the strings.
+
+Uses two cells on the right of the second string.
 
 STRING REVERSAL (reverse.bf)
 
