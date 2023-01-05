@@ -1,10 +1,12 @@
 .PHONY: all min clean
 
 min: length.min.bf clip.min.bf concatenate.min.bf deinterleave.min.bf duplicate.min.bf swap.min.bf reverse.min.bf copy.min.bf
-# copy.bf is the only derivative file so far, the other ones are literal
+
+# copy.bf is the only derivative file so far
 all: copy.bf min
-clean: copy.bf length.min.bf clip.min.bf concatenate.min.bf deinterleave.min.bf duplicate.min.bf swap.min.bf reverse.min.bf copy.min.bf
-	rm $^
+
+clean:
+	rm copy.bf length.min.bf clip.min.bf concatenate.min.bf deinterleave.min.bf duplicate.min.bf swap.min.bf reverse.min.bf copy.min.bf
 
 %.bf: %.in
 	m4 str.m4 $^ >> $@
