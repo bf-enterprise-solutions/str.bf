@@ -10,7 +10,8 @@ and adding some Brainfuck-specific utilities, like
 - duplication,
 - swapping,
 - reversal,
-- and length clipping.
+- char repetition,
+- and string length clipping.
 
 The common features of all the algorithms in this library are:
 - They are optimized to be copy-paste-able in place, with the position of the cursor explicitly stated in their respective documentation below.
@@ -76,6 +77,17 @@ into
 [0] [A1] [A2] [A3] [0] [B1] [B2] [0]
 
 Should work fine with differing sequence lengths.
+
+CHARACTER REPETITION (repeat.bf)
+
+Memory layout:
+[0] [N] [0] [C] [0]
+     ^ cursor here
+
+Creates a non-empty string of character C repeated N times. For example:
+[0] [5] [0] [h] [0]
+becomes
+[0] [h] [h] [h] [h] [h] [0]
 
 STRING DUPLICATION (duplicate.bf)
 
