@@ -61,9 +61,16 @@ Just that, yes.
 
 - TODO: concatenate multiple strings.
 
+STRING INTERLEAVING (interleave.bf)
+
+Interleaving (in this context) means making two strings to move in parallel to each other in memory, exchanging the cells with the first one and the cells with the second one (empty if strings of uneven lengths). For instance, interleaving turns
+[0] [A1] [A2] [A3] [0] [B1] [B2] [0]
+into
+[0] [A1] [B1] [A2] [B2] [A3] [0]
+
 STRING DE-INTERLEAVING (deinterleave.bf)
 
-Deinterleaving (in this context) means splitting two sequences positioned in parallel to each other in memory (quite a frequent data layout in Brainfuck programs)—into two independent sequences. For instance, deinterleaving turns
+Deinterleaving (in this context) means the opposite of interleaving—splitting two sequences positioned in parallel to each other in memory (quite a frequent data layout in Brainfuck programs)—into two independent sequences. For instance, deinterleaving turns
 [0] [A1] [B1] [A2] [B2] [A3] [0]
 into
 [0] [A1] [A2] [A3] [0] [B1] [B2] [0]
