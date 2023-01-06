@@ -89,6 +89,8 @@ Creates a non-empty string of character C repeated N times. For example:
 becomes
 [0] [h] [h] [h] [h] [h] [0]
 
+Uses N+1 cells (growing to the right) to generate the string of length N.
+
 STRING DUPLICATION (duplicate.bf)
 
 Memory layout:
