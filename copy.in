@@ -1,2 +1,2 @@
-include(<!duplicate.bf!>)
-include(<!deinterleave.bf!>)
+include(duplicate.bf)
+include(deinterleave.bf)
