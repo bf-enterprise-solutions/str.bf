@@ -1,6 +1,6 @@
 .PHONY: all min clean
 
-min-files = length.min.bf clip.min.bf concatenate.min.bf deinterleave.min.bf repeat.min.bf duplicate.min.bf swap.min.bf reverse.min.bf copy.min.bf
+min-files = length.min.bf clip.min.bf concatenate.min.bf interleave.min.bf deinterleave.min.bf repeat.min.bf duplicate.min.bf swap.min.bf reverse.min.bf copy.min.bf
 min: $(min-files)
 
 # copy.bf is the only derivative file so far
