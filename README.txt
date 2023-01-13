@@ -6,7 +6,7 @@ Given that Brainfuck is terribly low-level, one might encounter lots of difficul
 - comparison,
 - length computation,
 and adding some Brainfuck-specific utilities, like
-- string deinterleaving
+- string (de)interleaving
 - duplication,
 - swapping,
 - reversal,
@@ -68,6 +68,8 @@ Interleaving (in this context) means making two strings to move in parallel to e
 [0] [A1] [A2] [A3] [0] [B1] [B2] [0]
 into
 [0] [A1] [B1] [A2] [B2] [A3] [0]
+
+Requires value wrapping due to using 255 beacon cells.
 
 STRING DE-INTERLEAVING (deinterleave.bf)
 
