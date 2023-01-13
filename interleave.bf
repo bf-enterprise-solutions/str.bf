@@ -1,17 +1,12 @@
-[]
->,----- ----- [+++++ +++++>,----- -----] ; read a text until a newline
->,----- ----- [+++++ +++++>,----- -----] ; read a text until a newline
-<[<]<[<]>
-
 [>]>[>]< ; to the end of the second string
 [[>>+<<-]<] ; shift it two spaces right
->>>>[>]< ; to the end of it again
+>>>[>]< ; to the end of it again
 [ ; spreading loop
  [[>+<-]<] ; shift the whole string to the right
  >>[<+>-] ; pinch the first char out of it
  >[>]< ; to the end of the string
 ] ; spreading loop ends
-<[<<]< ; to the end of the first string
+<[<<]<< ; to the end of the first string
 [ ; interleaving loop
  >->>> ; to the second string first char (and leave a 255 beacon)
  [[<<+>>-]>>] ; copy the whole second string closer
