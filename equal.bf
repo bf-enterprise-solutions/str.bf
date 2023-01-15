@@ -24,3 +24,7 @@ include(interleave.bf)
  ;;     * remove the equality flag
  ;;     * and restore all the string from the copy
 ]
+
+;; TODO: What if we just fill both strings with ones then copy them
+;; both and then operate on the right copy? The left copy is intact
+;; and no shifting is required for operations?
