@@ -1,6 +1,6 @@
 [ ; reversal loop
  [<+>-]< ; copy the first char to the left
- [>>[>]>+<<[<]<-] ; char copy loop
+ [>>[>]>+<<[<]<-] ; copy the first char to after the string
  >>[[<+>-]>] ; copy the remaining string to the left
  <<[<]> ; to the first char again
 ] ; reversal loop end
