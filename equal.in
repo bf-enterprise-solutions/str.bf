@@ -2,8 +2,8 @@
 <[<]> ; to the start
 include(copy.bf)
 [>]>[>]< ; to the copy end
-[[>+<-]<] ; shift the copy two cells right
->>[>]< ; to the copy end
+[[>>+<<-]<] ; shift the copy two cells right
+>>>[>]< ; to the copy end
 [-<]> ; subtract one to get initial strings
 include(interleave.bf)
 <<+>> ; set equality flag
