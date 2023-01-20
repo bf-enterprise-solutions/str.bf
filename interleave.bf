@@ -21,4 +21,4 @@
 ; move it all back to the starting positions:
 [[<<+>>-]>] ; first the contiguous part
 >[[<<+>>-]>>] ; and then the spreadout part
-+[-<+] ; to the beacon (and we're done)
++[-<+]> ; to the beacon (and we're done)
