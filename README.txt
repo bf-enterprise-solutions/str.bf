@@ -1,6 +1,6 @@
 STR.BF — THE STRING MANIPULATION LIBRARY FOR BRAINFUCK
 
-Given that Brainfuck is terribly low-level, one might encounter lots of difficulties trying to manipulate contiguous null-terminated chunks of cells (= strings/arrays, further simply strings) meaningfully and doing the operations on the level of (at least) C string.h library. str.bf tries to bridge this gap with familiar (by string.h) operations, like
+Given that Brainfuck is terribly low-level, one might encounter lots of difficulties trying to manipulate contiguous null-terminated chunks of cells (= strings/arrays, further simply strings) meaningfully and doing the operations on the level of (at least) C string.h library. str.bf tries to bridge this gap with familiar operations, like
 - string copying,
 - concatenation,
 - comparison,
@@ -20,7 +20,7 @@ The common features of all the algorithms in this library are:
 - They are optimized to
   1) be easily embeddable and re-usable (to the point of some simpler ones being embedded into the more complex ones),
   2) take the least amount of cycles possible, and
-  3) to be as short as possible
+  3) to be as short as possible command-wise.
 
 STRING LENGTH (length.bf)
 
@@ -153,5 +153,15 @@ where c is the char to search in string.
 
 
 STRING COMPARISON (equal.bf)
+
+Memory layout:
+[0] [first string...] [0] [second string...] [0]
+     ^ cursor here
+compares the strings and ends up with
+[0] [equality flag] [0] [first string...] [0] [second string...] [0]
+     ^ cursor here
+where equality flag is either 1 (strings equal) or 0 (not equal).
+
+The biggest memory drain is a relatively spacious interleaving.bf, so once it's optimized equal.bf will take less memory too.
 
 SUBSTRING SEARCH (search.bf)
