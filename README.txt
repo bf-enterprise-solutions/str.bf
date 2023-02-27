@@ -144,14 +144,6 @@ ends up being
 
 Note that you have to invoke at least make copy.bf (or, at most, make all) to have copy.bf in the checkout. copy.bf is generated from duplicate.bf and deinterleave.bf via M4 macros.
 
-CHAR SEARCH (char.bf)
-
-Memory layout:
-[0] [c] [0] [string...] [0]
-     ^ cursor here
-where c is the char to search in string.
-
-
 STRING COMPARISON (equal.bf)
 
 Memory layout:
@@ -163,5 +155,7 @@ compares the strings and ends up with
 where equality flag is either 1 (strings equal) or 0 (not equal).
 
 The biggest memory drain is a relatively spacious interleaving.bf, so once it's optimized equal.bf will take less memory too.
+
+CHAR SEARCH (char.bf)
 
 SUBSTRING SEARCH (search.bf)
