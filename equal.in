@@ -33,4 +33,4 @@ include(interleave.bf)
  >[<+>-] ; copy the equality flag closer
  << ; to the next char
 ]
->[<+>-]< ; copy the equality flag
+> ; to the equality flag
