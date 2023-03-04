@@ -147,11 +147,11 @@ Note that you have to invoke at least make copy.bf (or, at most, make all) to ha
 STRING COMPARISON (equal.bf)
 
 Memory layout:
-[0] [first string...] [0] [second string...] [0]
-     ^ cursor here
+[0] [0] [first string...] [0] [second string...] [0]
+         ^ cursor here
 compares the strings and ends up with
-[0] [equality flag] [0] [first string...] [0] [second string...] [0]
-     ^ cursor here
+[0] [0] [equality flag] [0] [first string...] [0] [second string...] [0]
+         ^ cursor here
 where equality flag is either 1 (strings equal) or 0 (not equal).
 
 The biggest memory drain is a relatively spacious interleaving.bf, so once it's optimized equal.bf will take less memory too.
