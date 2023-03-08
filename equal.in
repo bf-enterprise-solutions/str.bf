@@ -1,36 +1,36 @@
-[+>]+>[+>] ; increase both strings and space in between
-<[<]> ; to the start
+[+>]+>[+>] increase both strings and space in between
+<[<]> to the start
 include(copy.bf)
-[>]>[>]< ; to the copy end
-[[>>+<<-]<] ; shift the copy two cells right
->>>[>]< ; to the copy end
-[-<]> ; subtract one to get initial strings
+[>]>[>]< to the copy end
+[[>>+<<-]<] shift the copy two cells right
+>>>[>]< to the copy end
+[-<]> subtract one to get initial strings
 include(interleave.bf)
-<<+>> ; set equality flag
-;; TODO: Check the length inequality and shortcircuit to inequality case
-[ ; equality bruteforce loop
- [>-<-] ; subtract both first and second string characters
- >[ ; if second string character nonzero (not equal)
-  [-]<<<[-]>>> ; kill second character and equality flag
+<<+>> set equality flag
+TODO: Check the length inequality and shortcircuit to inequality case
+[ equality bruteforce loop
+ [>-<-] subtract both first and second string characters
+ >[ if second string character nonzero (not equal)
+  [-]<<<[-]>>> kill second character and equality flag
  ]
- >[[<<+>>-]>] ; shift the remaining contiguous part to the left
- >[ ; if spreadout remains are there (cannot be equal then):
-  ; * destroy them
+ >[[<<+>>-]>] shift the remaining contiguous part to the left
+ >[ if spreadout remains are there (cannot be equal then):
+  * destroy them
   [>>]<<[[-]<<]
-  ; * destroy contiguous part
+  * destroy contiguous part
   <<[[-]<]
-  ; * and kill equality flag
+  * and kill equality flag
   <[-]
-  ; * and get back to the "spreadout" part (now empty)
+  * and get back to the "spreadout" part (now empty)
   >>>>>
  ]
- <<<<[<]> ; to the contiguous part
+ <<<<[<]> to the contiguous part
 ]
-<<[<+>-] ; copy the equality flag closer
-<< ; to the string
-[ ; finalization loop
- -[>>+<<-] ; subtract one from the string and copy it over the equality flag
- >[<+>-] ; copy the equality flag closer
- << ; to the next char
+<<[<+>-] copy the equality flag closer
+<< to the string
+[ finalization loop
+ -[>>+<<-] subtract one from the string and copy it over the equality flag
+ >[<+>-] copy the equality flag closer
+ << to the next char
 ]
-> ; to the equality flag
+> to the equality flag
