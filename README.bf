@@ -33,7 +33,19 @@
  -- take the least amount of cycles possible, and
  -- to be as short as possible command-wise.
 
- [1 STRING LENGTH (length.bf)
+ [1 GETTING STARTED
+
+  Clone the code:
+  [shell:
+   git clone https://github.com/bf-enterprise-solutions/str.bf.git]
+  And build str.bf:
+  [shell:
+   make all]
+
+  Copy-paste it into your code and enjoy the seamless efficiency of
+  the string algorithms in str.bf!]
+
+ [2 STRING LENGTH (length.bf)
 
   Memory layout:
   [^0] [string...] [0]
@@ -47,7 +59,7 @@
   l. Make sure to free at least two cell on the right before using
   this algorithm, as it shifts the measured string to the right.]
 
- [2 STRING CLIPPING/SHORTENING (clip.bf)
+ [3 STRING CLIPPING/SHORTENING (clip.bf)
 
   Memory layout:
   [^N] [0] [string..] [0]
@@ -62,7 +74,7 @@
 
   - TODO: clip with start and end indices, not just end one.]
 
- [3 STRING CONCATENATION (concatenate.bf)
+ [4 STRING CONCATENATION (concatenate.bf)
 
   Turns
   [^first string...] [0] [second string...] [0]
@@ -73,7 +85,7 @@
 
   - TODO: concatenate multiple strings.]
 
- [4 STRING INTERLEAVING (interleave.bf)
+ [5 STRING INTERLEAVING (interleave.bf)
 
   Interleaving (in this context) means making two strings to move in
   parallel to each other in memory, exchanging the cells with the
@@ -85,7 +97,7 @@
 
   Requires value wrapping due to using 255 beacon cells.]
 
- [5 STRING DE-INTERLEAVING (deinterleave.bf)
+ [6 STRING DE-INTERLEAVING (deinterleave.bf)
 
   Deinterleaving (in this context) means the opposite of
   interleaving—splitting two sequences positioned in parallel to each
@@ -98,7 +110,7 @@
 
   Should work fine with differing sequence lengths.]
 
- [6 CHARACTER REPETITION (repeat.bf)
+ [7 CHARACTER REPETITION (repeat.bf)
 
   Memory layout:
   [^0] [N] [0] [C] [0]
@@ -110,7 +122,7 @@
 
   Uses N+1 cells (growing to the right) to generate the string of length N.]
 
- [7 STRING DUPLICATION (duplicate.bf)
+ [8 STRING DUPLICATION (duplicate.bf)
 
   Memory layout:
   [^0] [string...] [0]
@@ -125,7 +137,7 @@
   Requires at least 2N cells to duplicate the string, where N is the
   length of the string. Grows to the right.]
 
- [8 STRING SWAPPING (swap.bf)
+ [9 STRING SWAPPING (swap.bf)
 
   Swaps two strings adjacent to each other, so that
   [0] [^first string...] [0] [second string...] [0] [0]
@@ -139,7 +151,7 @@
   (as all the other leading zeros in this repository memory layouts)
   for it to be empty.]
 
- [9 STRING REVERSAL (reverse.bf)
+ [10 STRING REVERSAL (reverse.bf)
 
   Simply reverses the string, so that
   [0] [^h] [e] [l] [l] [o] [0]
@@ -150,7 +162,7 @@
   - N+2 cells, where N is the length of the string,
   - and the zero cell preceding the string, so it's mandatory for it to be empty.]
 
- [10 STRING COPYING (copy.bf)
+ [11 STRING COPYING (copy.bf)
 
   Memory layout:
   [0] [^string...] [0]
@@ -164,7 +176,7 @@
   make all) to have copy.bf in the checkout. copy.bf is generated from
   duplicate.bf and deinterleave.bf via M4 macros.]
 
- [11 STRING COMPARISON (equal.bf)
+ [12 STRING COMPARISON (equal.bf)
 
   Memory layout:
   [0] [0] [^first string...] [0] [second string...] [0]
