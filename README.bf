@@ -198,7 +198,10 @@
   hashing if they need to retain the contents.
 
   The computed hash is by no means cryptographic, but it's good enough
-  for most string comparison purposes.]
+  for most string comparison purposes.
+
+  You can alter the SALT in the source file before using the
+  algorithm.]
 
  [TODO: CHAR SEARCH (char.bf)]
  [TODO: SUBSTRING SEARCH (search.bf)]]
