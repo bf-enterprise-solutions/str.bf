@@ -9,6 +9,7 @@
  - string copying,
  - concatenation,
  - comparison,
+ - hashing,
  - length computation,
  and adding some Brainfuck-specific utilities, like
  - string (de)interleaving
@@ -186,6 +187,18 @@
 
   The biggest memory drain is a relatively spacious interleaving.bf,
   so once it's optimized equal.bf will take less memory too.]
+
+ [12 STRING hashing (hash.bf)
+
+  Memory layout:
+  [0] [^string...] [0] [0] [0]
+  compares the strings and ends up with
+  [0] [hash] [0]
+  which means the string is destroyed. So one MUST copy.bf it if before
+  hashing if they need to retain the contents.
+
+  The computed hash is by no means cryptographic, but it's good enough
+  for most string comparison purposes.]
 
  [TODO: CHAR SEARCH (char.bf)]
  [TODO: SUBSTRING SEARCH (search.bf)]]
