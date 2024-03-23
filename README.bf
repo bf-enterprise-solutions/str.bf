@@ -188,7 +188,7 @@
   The biggest memory drain is a relatively spacious interleaving.bf,
   so once it's optimized equal.bf will take less memory too.]
 
- [12 STRING hashing (hash.bf)
+ [12 STRING HASHING (hash.bf)
 
   Memory layout:
   [0] [^string...] [0] [0] [0]
