@@ -1,6 +1,7 @@
 [>] to the end of the string
 <[ start from the end
- >+++ add SALT to the accumulator
+ >+ add SALT to the accumulator
+ the most reliable SALT values are primes except 2
  < back to char
  [>[>+>+<<-] multiply accumulator
   >[<+>-] copy it back
