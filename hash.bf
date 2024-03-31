@@ -1,12 +1,9 @@
 [>] to the end of the string
-<[ start from the end
- >+ add SALT to the accumulator
++< add 1 to accumulator and move to last char
+[
+ multiply the accumulator by SALT and add to the last char
  the most reliable SALT values are primes except 2
- < back to char
- [>[>+>+<<-] multiply accumulator
-  >[<+>-] copy it back
-  <<- decrease the char
- ]
- >>>[<<<+>>>-] to the multiplied data and copy it to the char
- <<[-]<< to the next char and delete old accumulator
+ in this case it's 3
+ >[<+++>-]
+ << to the next char
 ]> to the computed hash
